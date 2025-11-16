@@ -5,26 +5,26 @@ import { Award, Target, Heart, Zap, Instagram, Twitter } from 'lucide-react';
 const OurTeam = () => {
     const teamMembers = [
         {
-            name: "Sarah Ahmed",
-            role: "CEO & Founder",
+            name: "Sahand Jaza",
+            role: "Full Stack Developer & Founder",
             image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
             icon: Award
         },
         {
-            name: "Mohammed Ali",
-            role: "CTO",
+            name: "Yad Jalal",
+            role: "C0-Founder & Financial & Partnership",
             image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
             icon: Target
         },
         {
-            name: "Layla Hassan",
-            role: "Head of Design",
+            name: "Ayad Ali",
+            role: "Software Engineer",
             image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
             icon: Heart
         },
         {
-            name: "Omar Ibrahim",
-            role: "Marketing Director",
+            name: "Shad Jalal",
+            role: "Designer & Branding lead",
             image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
             icon: Zap
         }

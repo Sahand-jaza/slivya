@@ -1,7 +1,7 @@
 // components/Footer.jsx
 import React from 'react';
 import { Sparkles, Facebook, Instagram, Twitter, Phone, Mail, MapPinned, Heart } from 'lucide-react';
-
+import slivya from '../assets/yellow_clock white_S red_location.svg'
 const Footer = () => {
     return (
         <footer className="py-12 px-6 bg-gray-900 border-t border-gray-800">
@@ -10,7 +10,7 @@ const Footer = () => {
                     {/* Brand */}
                     <div className="md:col-span-1">
                         <div className="flex items-center space-x-2 mb-4">
-                            <Sparkles className="w-8 h-8 text-purple-400 animate-pulse" />
+                            <img src={slivya} alt="slivya logo" width={80}/>
                             <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Slivya
               </span>
@@ -66,11 +66,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-start gap-2 text-gray-400">
                                 <Mail className="w-5 h-5 text-pink-400 mt-0.5" />
-                                <span>hello@slivya.com</span>
+                                <span>info@slivya.com</span>
                             </li>
                             <li className="flex items-start gap-2 text-gray-400">
                                 <MapPinned className="w-5 h-5 text-purple-400 mt-0.5" />
-                                <span>Baghdad, Iraq</span>
+                                <span>Slemani, Iraq</span>
                             </li>
                         </ul>
                     </div>
@@ -79,7 +79,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-800 text-center">
                     <p className="text-gray-400">
-                        © 2024 Slivya. All rights reserved. Made with{' '}
+                        © 2025 Slivya. All rights reserved. Made with{' '}
                         <Heart className="inline w-4 h-4 text-pink-400 animate-pulse" /> in Iraq
                     </p>
                 </div>

@@ -1,7 +1,7 @@
 // components/Header.jsx
 import React, { useState, useEffect } from 'react';
 import { Sparkles, Menu, X } from 'lucide-react';
-
+import logo from '../assets/yellow_clock white_S red_location.svg'
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,7 +24,7 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center space-x-2 group">
-                        <Sparkles className="w-8 h-8 text-purple-400 group-hover:text-pink-400 transition-colors duration-300 animate-pulse" />
+                        <img src={logo} alt="Slivya Logo"/>
                         <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Slivya
             </span>

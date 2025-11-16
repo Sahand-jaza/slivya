@@ -1,7 +1,7 @@
 // components/Hero.jsx
 import React from 'react';
 import { Sparkles, MapPin } from 'lucide-react';
-
+import slivya from '../assets/yellow_clock white_S red_location.svg'
 const Hero = () => {
     return (
         <section id="home" className="pt-32 pb-20 px-6">
@@ -43,7 +43,7 @@ const Hero = () => {
                             <div className="bg-gray-900 h-full rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center relative">
                                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl"></div>
                                 <div className="text-center z-10 space-y-4 animate-pulse">
-                                    <Sparkles className="w-16 h-16 mx-auto text-purple-400" />
+                                    <img src={slivya} alt="Slivya Logo"/>
                                     <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                                         Slivya
                                     </h3>
