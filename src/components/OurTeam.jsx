@@ -1,31 +1,34 @@
 // components/OurTeam.jsx
 import React from 'react';
 import { Award, Target, Heart, Zap, Instagram, Twitter } from 'lucide-react';
-
+import Sahand from '../assets/sahand jaza.png'
+import Yad from '../assets/yad jalal.png'
+import Ayad from '../assets/ayad ali.png'
+import Shad from '../assets/shad jalal.png'
 const OurTeam = () => {
     const teamMembers = [
         {
             name: "Sahand Jaza",
             role: "Full Stack Developer & Founder",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+            image: Sahand,
             icon: Award
         },
         {
             name: "Yad Jalal",
             role: "C0-Founder & Financial & Partnership",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+            image: Yad,
             icon: Target
         },
         {
             name: "Ayad Ali",
             role: "Software Engineer",
-            image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+            image: Ayad,
             icon: Heart
         },
         {
             name: "Shad Jalal",
             role: "Designer & Branding lead",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+            image: Shad,
             icon: Zap
         }
     ];
@@ -49,15 +52,17 @@ const OurTeam = () => {
                         >
                             <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                                 {/* Image Container */}
-                                <div className="relative mb-4 overflow-hidden rounded-xl">
+
+                                <div className="relative mb-4 overflow-hidden rounded-xl bg-gray-700 h-48 flex items-center justify-center">
                                     <img
                                         src={member.image}
                                         alt={member.name}
-                                        className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                                        style={{ objectPosition: 'center center' }}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-30"></div>
                                     {/* Icon Badge */}
-                                    <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                                    <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 z-10">
                                         <member.icon className="w-6 h-6 text-white" />
                                     </div>
                                 </div>
