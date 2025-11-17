@@ -1,27 +1,25 @@
-// components/ForBeautyCenters.jsx
+// components/Why Slivya Is Different.jsx
 import React from 'react';
 import { Users, TrendingUp, Calendar } from 'lucide-react';
 
-const ForBeautyCenters = () => {
+const WhySlivyaIsDifferent = () => {
     const benefits = [
         {
             icon: Users,
-            title: "Reach More Customers",
-            description: "Connect with thousands of potential customers actively searching for beauty services in Iraq.",
-            stats: "10K+ Active Users"
+            title: "Local-First Platform",
+            description: "Optimized for salons and barbers in Iraq with Arabic & Kurdish support, local time zones, and cultural habits built in.",
         },
         {
             icon: TrendingUp,
-            title: "Boost Your Revenue",
-            description: "Reduce no-shows and maximize bookings with our intelligent scheduling system.",
-            stats: "30% Revenue Increase"
+            title: "Flexible Payments",
+            description: "Supports cash, card, and local e-wallets so beauty centers can get paid the way their customers actually pay.",
         },
         {
             icon: Calendar,
-            title: "Manage Effortlessly",
-            description: "Streamline appointments, staff schedules, and customer communications all in one platform.",
-            stats: "Save 10 Hours/Week"
+            title: "Two Apps, One Ecosystem",
+            description: "A dedicated app for customers and a separate app for beauty centers, fully synced for smoother bookings and management.",
         }
+      
     ];
 
     return (
@@ -29,9 +27,9 @@ const ForBeautyCenters = () => {
             <div className="container mx-auto">
                 <div className="text-center mb-16 animate-fadeIn">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 py-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        For Beauty Centers
+                        Why Slivya Is Different
                     </h2>
-                    <p className="text-gray-400 text-xl">Grow your business with powerful tools</p>
+                    <p className="text-gray-400 text-xl">Built for beauty businesses in Iraq, not just another global booking app.</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
@@ -46,9 +44,7 @@ const ForBeautyCenters = () => {
                             </div>
                             <h3 className="text-2xl font-bold mb-4 text-white">{benefit.title}</h3>
                             <p className="text-gray-400 mb-4 leading-relaxed">{benefit.description}</p>
-                            <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-500/30">
-                                <span className="text-sm font-semibold text-purple-300">{benefit.stats}</span>
-                            </div>
+                            
                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-500/5 to-purple-500/5 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                     ))}
@@ -58,4 +54,4 @@ const ForBeautyCenters = () => {
     );
 };
 
-export default ForBeautyCenters;
+export default WhySlivyaIsDifferent;

@@ -31,7 +31,7 @@ const ForCustomers = () => {
     ];
 
     return (
-        <section id="for-customers" className="py-20 px-6">
+        <section id="for-customers" className="py-20 px-6 ">
             <div className="container mx-auto">
                 <div className="text-center mb-16 animate-fadeIn">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">

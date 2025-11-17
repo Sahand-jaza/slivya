@@ -45,10 +45,13 @@ const Header = () => {
                     </div>
 
                     {/* Join Waitlist Button */}
-                    <button className="hidden md:block relative px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold overflow-hidden group">
-                        <span className="relative z-10">Join Waitlist</span>
+                    <button  className="cursor-pointer hidden md:block relative px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold overflow-hidden group">
+                        <a href="#contact">
+
+                        <span className="relative z-10">Contact Us</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                        </a>
                     </button>
 
                     {/* Mobile Menu Button */}
@@ -74,9 +77,7 @@ const Header = () => {
                                     {item}
                                 </a>
                             ))}
-                            <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold">
-                                Join Waitlist
-                            </button>
+                          
                         </div>
                     </div>
                 )}

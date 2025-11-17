@@ -1,21 +1,21 @@
 // components/OurTeam.jsx
 import React from 'react';
 import { Award, Target, Heart, Zap, Instagram, Twitter } from 'lucide-react';
-import Sahand from '../assets/sahand jaza.png'
-import Yad from '../assets/yad jalal.png'
+import Sahand from '../assets/sahand.jpg'
+import Yad from '../assets/yad.jpg'
 import Ayad from '../assets/ayad ali.png'
-import Shad from '../assets/shad jalal.png'
+import Shad from '../assets/shad.jpg'
 const OurTeam = () => {
     const teamMembers = [
         {
             name: "Sahand Jaza",
-            role: "Full Stack Developer & Founder",
+            role: "Founder & Full stack mobile & AI developer",
             image: Sahand,
             icon: Award
         },
         {
             name: "Yad Jalal",
-            role: "C0-Founder & Financial & Partnership",
+            role: "CO-Founder & Financial Partnership",
             image: Yad,
             icon: Target
         },
@@ -57,7 +57,7 @@ const OurTeam = () => {
                                     <img
                                         src={member.image}
                                         alt={member.name}
-                                        className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                                        className=" w-4/5 h-full rounded-full object-cover bg transform group-hover:scale-105 transition-transform duration-500"
                                         style={{ objectPosition: 'center center' }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-30"></div>

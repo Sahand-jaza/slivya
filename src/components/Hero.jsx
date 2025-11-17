@@ -21,19 +21,9 @@ const Hero = () => {
                             Book salons, barbers, and spas in seconds. One platform for customers and beauty centers.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  Join Early Access
-                  <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                </span>
-                                <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </button>
-                            <button className="group px-8 py-4 border-2 border-purple-500 rounded-full font-semibold text-lg hover:bg-purple-500/20 transition-all duration-300 transform hover:scale-105">
-                <span className="flex items-center justify-center gap-2">
-                  I'm a Beauty Center
-                  <MapPin className="w-5 h-5 group-hover:bounce" />
-                </span>
-                            </button>
+               
+                             
+                          
                         </div>
                     </div>
 
