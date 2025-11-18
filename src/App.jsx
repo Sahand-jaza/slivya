@@ -13,7 +13,7 @@ import './styles/animations.css';
 
 const App = () => {
     return (
-        <div className="bg-gradient-to-br  from-gray-900 via-purple-900 to-gray-900 min-h-screen text-white">
+        <div className="bg-gradient-to-br w-full overflow-x-hidden  from-gray-900 via-purple-900 to-gray-900 min-h-screen text-white">
             <Header />
             <Hero />
             <HowItWorks />
