@@ -53,13 +53,16 @@ const OurTeam = () => {
                             <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                                 {/* Image Container */}
 
-                                <div className="relative mb-4 overflow-hidden rounded-xl bg-gray-700 h-48 flex items-center justify-center">
-                                    <img
-                                        src={member.image}
-                                        alt={member.name}
-                                        className=" w-4/5 h-full rounded-full object-cover bg transform group-hover:scale-105 transition-transform duration-500"
-                                        style={{ objectPosition: 'center center' }}
-                                    />
+                                <div className="relative mb-4 overflow-hidden rounded-xl bg-gray-700 flex items-center justify-center">
+                                    <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full overflow-hidden flex items-center justify-center">
+                                        <img
+                                            src={member.image}
+                                            alt={member.name}
+                                            loading="lazy"
+                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                            style={{ objectPosition: 'center center' }}
+                                        />
+                                    </div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-30"></div>
                                     {/* Icon Badge */}
                                     <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 z-10">
