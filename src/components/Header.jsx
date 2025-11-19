@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles, Menu, X } from 'lucide-react';
 import logo from '../assets/yellow_clock white_S red_location.svg'
+
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,17 +18,16 @@ const Header = () => {
     const menuItems = ['Home', 'How it Works', 'For Customers', 'For Beauty Centers', 'Our Team'];
 
     return (
-        <header className={`fixed w-full z-50 transition-all duration-300 ${
-            isScrolled ? 'bg-gray-900/95 backdrop-blur-lg shadow-lg shadow-purple-500/10' : 'bg-transparent'
-        }`}>
+        <header className={`fixed w-full z-50 transition-all duration-300 ${(isScrolled || mobileMenuOpen) ? 'bg-gray-900/95 backdrop-blur-lg shadow-lg shadow-purple-500/10' : 'bg-transparent'
+            }`}>
             <nav className="container mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center space-x-2 group">
-                        <img src={logo} alt="Slivya Logo"/>
+                        <img src={logo} alt="Slivya Logo" />
                         <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Slivya
-            </span>
+                            Slivya
+                        </span>
                     </div>
 
                     {/* Desktop Menu */}
@@ -45,12 +45,12 @@ const Header = () => {
                     </div>
 
                     {/* Join Waitlist Button */}
-                    <button  className="cursor-pointer hidden md:block relative px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold overflow-hidden group">
+                    <button className="cursor-pointer hidden md:block relative px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold overflow-hidden group">
                         <a href="#contact">
 
-                        <span className="relative z-10">Contact Us</span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                            <span className="relative z-10">Contact Us</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                         </a>
                     </button>
 
@@ -77,7 +77,7 @@ const Header = () => {
                                     {item}
                                 </a>
                             ))}
-                          
+
                         </div>
                     </div>
                 )}
