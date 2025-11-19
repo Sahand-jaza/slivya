@@ -6,14 +6,31 @@ const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phone: '',
         message: ''
     });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        alert('Thank you for your message! We\'ll get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
+        try {
+            const response = await fetch('http://localhost:3001/api/messages', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                setFormData({ name: '', email: '', phone: '', message: '' });
+            } else {
+                alert('Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error sending message:', error);
+            alert('An error occurred. Please try again later.');
+        }
     };
 
     return (
@@ -57,6 +74,18 @@ const ContactForm = () => {
                     </div>
                     <div className="mb-6 group">
                         <label className="block text-sm font-semibold mb-2 text-gray-300 group-focus-within:text-purple-400 transition-colors duration-300">
+                            Phone Number
+                        </label>
+                        <input
+                            type="tel"
+                            value={formData.phone}
+                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all duration-300 text-white"
+                            placeholder="Enter your phone number"
+                        />
+                    </div>
+                    <div className="mb-6 group">
+                        <label className="block text-sm font-semibold mb-2 text-gray-300 group-focus-within:text-purple-400 transition-colors duration-300">
                             Message
                         </label>
                         <textarea
@@ -72,10 +101,10 @@ const ContactForm = () => {
                         type="submit"
                         className="group relative w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold text-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
                     >
-            <span className="relative z-10 flex items-center justify-center gap-2">
-              Send Message
-              <Mail className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </span>
+                        <span className="relative z-10 flex items-center justify-center gap-2">
+                            Send Message
+                            <Mail className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        </span>
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </button>
                 </form>
